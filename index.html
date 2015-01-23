@@ -4,36 +4,181 @@
     <meta charset="UTF-8">
     <title>kersten.email</title>
 
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans'
+          rel='stylesheet' type='text/css'>
+
     <style>
-        /* Not enough style to justify a separate CSS file/request. */
+        /* Not enough rules to justify a separate CSS file/request. */
+
+        html {
+            background-color: #f7f7f7;
+            font-family: 'Open Sans', sans-serif;
+            color: #444;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3333f7;
+        }
+
+        a:hover {
+            color: #6666f7;
+        }
+
+        a:visited {
+            color: #3333f7;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0px;
+        }
+
         img.circle128 {
             border-radius: 64px;
         }
 
-        img.left {
-            float: left;
-            margin: 1em;
+        img.block {
+            display: block;
         }
 
-        div.center-container {
+        /**
+         * First center for (block) images, to get the auto margins to put us in
+         * the center of the page.
+         **/
+        img.center {
             margin-left: auto;
             margin-right: auto;
-            width: 75vh;
-            background-color: #ddd;
+        }
+
+        div.margin2 {
+            margin-left: 2em;
+            margin-right: 2em;
+        }
+
+        div.center-vp-container {
+            margin-left: auto;
+            margin-right: auto;
+            width: 40em;
+            background-color: #fafafa;
             padding: 2em;
+        }
+
+        div.preformatted {
+            font-family: monospace;
+            padding: 1em;
+            text-align: center;
+        }
+
+        /**
+         * Centering in general done with text-align, if not caught by more
+         * specific selector.
+         **/
+        .center {
+            text-align: center;
+        }
+
+        .round6 {
+            border-radius: 6px;
         }
     </style>
 </head>
 <body>
-<div class="center-container">
-    <img
-            class="circle128 left"
-            src="http://www.gravatar.com/avatar/6d11c33726a9bff37465a3007fe6de53?s=128"/>
-    <h1><a href="mailto:alex@kersten.email">alex@kersten.email</a></h1>
 
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ipsum metus, gravida eget mi sit amet, faucibus consequat nibh. Donec pretium vestibulum est, at lacinia nibh ultricies id. Vivamus laoreet malesuada ante, imperdiet fringilla eros gravida et. Aenean sit amet auctor ex. In orci purus, ornare a magna nec, aliquam volutpat nibh. Cras quis metus ipsum. Fusce varius tempor nisi at ullamcorper. Ut lacinia hendrerit nunc nec vehicula. Donec eget semper ante, ut malesuada nunc. Curabitur porta venenatis arcu et tristique. Duis euismod orci non enim efficitur vestibulum. Etiam pulvinar est eu cursus egestas. In urna nisl, pretium vel vestibulum vel, vehicula eu augue. Vivamus luctus bibendum erat a vestibulum. Donec sed augue odio. Donec sollicitudin neque non turpis rhoncus viverra.
-    </p>
+<div class="center-vp-container round6">
+    <div class="margin2">
+        <div>
+            <img
+                    class="circle128 block center"
+                    src="http://www.gravatar.com/avatar/6d11c33726a9bff37465a3007fe6de53?s=128"/>
+            <br/>
+
+            <h1 class="center">Alex Kersten</h1>
+
+            <h2 class="center">
+                <a href="mailto:alex@kersten.email">alex@kersten.email</a>
+            </h2>
+        </div>
+        <div class="preformatted">
+            <pre>
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: Keybase OpenPGP v1.0.5
+Comment: https://keybase.io/crypto
+
+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
+=Hbf2
+-----END PGP PUBLIC KEY BLOCK-----
+            </pre>
+        </div>
+    </div>
 </div>
 
 </body>
